@@ -1,4 +1,5 @@
 #include "first_scan.h"
+
 first_scan()
 {
     open_file_read();
