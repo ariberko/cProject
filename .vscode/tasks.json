@@ -2,20 +2,24 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build preprocessor",
+            "label": "compile",
             "type": "shell",
             "command": "gcc",
             "args": [
+                "-g",
+                "${workspaceFolder}/main.c",
+                "${workspaceFolder}/first_scan.c",
+                "${workspaceFolder}/second_scan.c",
+                "${workspaceFolder}/preprocessor.c",
                 "-o",
-                "${workspaceFolder}/preprocessor",
-                "${workspaceFolder}/preprocessor.c"
+                "${workspaceFolder}/main"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
             "problemMatcher": ["$gcc"],
-            "detail": "Building preprocessor executable"
+            "detail": "Compiling main.c and modules"
         }
     ]
 }

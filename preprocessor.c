@@ -186,3 +186,5 @@ int preprocessor(const char *fileName)
 
     return 0;
 }
+
+int add;

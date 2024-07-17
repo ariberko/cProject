@@ -4,7 +4,7 @@
 
 int main ()
 {
-  preprocessor("C:\\Users\\berko\\Documents\ari's stuff\\macro.as.txt");
+  preprocessor("C:\\Users\\berko\\Documents\\ari's stuff\\macro.as.txt");
   
   return 0;
 }

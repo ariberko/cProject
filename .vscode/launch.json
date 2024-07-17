@@ -2,11 +2,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run preprocessor",
+            "name": "Debug main.c",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/preprocessor",
-            "args": ["input.as"],
+            "program": "${workspaceFolder}/main",
+            "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
@@ -19,8 +19,8 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build preprocessor",
-            "miDebuggerPath": "/workspaces/cProject"
+            "preLaunchTask": "compile"
         }
+
     ]
 }
