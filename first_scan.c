@@ -5,6 +5,7 @@ int first_scan_process_line()
     
 }
 
+int first_line_;
 int first_scan(const char *fileName)
 {
     FILE *input_file = NULL;
