@@ -1,7 +1,4 @@
 #include "preprocessor.h"
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
 
 #define LINE_SIZE 80
 #define MAX_MACROS 100
@@ -70,7 +67,7 @@ char first_char(char line[])
 
 void copy_paste(char line[], FILE *output_file)
 {
-    fprintf(output_file, "%s", line);
+    fprintf(output_file, "%s\n", line);
 }
 
 void arrange_blanks_in_line(char line[])
@@ -113,12 +110,12 @@ void arrange_blanks_in_line(char line[])
 
 void add_macro(char line[], FILE *output_file)
 {
-    fprintf(output_file, "%s", line);
+    fprintf(output_file, "%s\n", line);
 }
 
 void save_macro(char line[])
 {
-    char*macro = (char*)strdup(line);
+    char *macro  = strdup(line);
     if (macro == NULL)
     {
         fprintf(stderr, "Error: Failed to allocate memory for macro\n");
@@ -164,11 +161,11 @@ int process_line(char line[], FILE *output_file)
 
 int preprocessor(const char *fileName)
 {
-    FILE *input_file, *output_file;
+    FILE *input_file = NULL, *output_file = NULL;
     if (open_file_read(&input_file, fileName) != 0)
         return 1;
 
-    if (open_file_write(&output_file, "output.txt") != 0)
+    if (open_file_write(&output_file, "output.am") != 0)
     {
         return 1;
     }
@@ -186,5 +183,3 @@ int preprocessor(const char *fileName)
 
     return 0;
 }
-
-int add;

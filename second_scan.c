@@ -2,6 +2,11 @@
 
 second_scan()
 {
+
+}
+/*
+second_scan()
+{
     open_file_read();
     while(!EOF())
     {
@@ -10,3 +15,4 @@ second_scan()
     }
     close_file_read();
 }
+*/

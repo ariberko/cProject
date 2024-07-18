@@ -1,6 +1,9 @@
 #ifndef PREPROCESSOR_H
 #define PREPROCESSOR_H
 
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 #include <stdio.h>
 
 // Function declarations

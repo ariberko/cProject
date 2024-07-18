@@ -1,1 +1,2 @@
-first_scan();
+#include "preprocessor.h"
+int first_scan();

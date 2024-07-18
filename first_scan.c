@@ -1,12 +1,22 @@
 #include "first_scan.h"
 
-first_scan()
+int first_scan_process_line()
 {
-    open_file_read();
-    while(!EOF())
+    
+}
+
+int first_scan(const char *fileName)
+{
+    FILE *input_file = NULL;
+    if (open_file_read(&input_file, fileName) != 0)
+        return 1;
+
+    char *line;
+    while ((line = get_next_line(input_file)) != NULL)
     {
-        get_nextLine();
-        process_line();
+        first_scan_process_line(line);
     }
-    close_file_read();
+
+    fclose(input_file);
+    return 0;
 }

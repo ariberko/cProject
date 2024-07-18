@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug main.c",
+            "name": "Debug cProject.c",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/main",

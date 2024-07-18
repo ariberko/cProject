@@ -4,7 +4,8 @@
 
 int main ()
 {
-  preprocessor("C:\\Users\\berko\\Documents\\ari's stuff\\macro.as.txt");
-  
+  preprocessor("test.as");
+  first_scan();
+  second_scan();
   return 0;
 }
