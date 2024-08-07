@@ -51,7 +51,7 @@ char *get_next_line(FILE *fp)
     return NULL;
 }
 
-void delete_line(void)
+void ignore_line(void)
 {
     // Function can be expanded to handle line deletion if needed
 }
@@ -137,11 +137,11 @@ int process_line(char line[], FILE *output_file)
 {
     if (line == NULL)
     {
-        delete_line();
+        ignore_line();
     }
     else if (first_char(line) == ';')
     {
-        delete_line();
+        ignore_line();
     }
     else
     {

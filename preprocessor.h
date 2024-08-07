@@ -21,7 +21,7 @@ int open_file_write(FILE **fp, const char *fileName);
 char *get_next_line(FILE *fp);
 
 // Marks a line for deletion or skip processing
-void delete_line(void);
+void ignore_line(void);
 
 // Gets the first character of a line
 char first_char(char line[]);
