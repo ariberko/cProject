@@ -3,24 +3,39 @@
 char *double_word_list[9] = {"clr", "not", "inc", "dec", "jmp", "bne", "red", "prn", "jsr"};
 char *triple_word_list[5] = {"mov", "cmp", "add", "sub", "lea"};
 
-int double_word(line)
+int double_word(char line[])
 {
     
 }
 
-int print_error(line)
+int includes_order(char line[])
+{
+
+}
+
+int valid_order_syntax(char line[])
+{
+
+}
+
+int single_word(char line[])
+{
+    
+}
+
+int print_error(char line[])
 {
     return 0;
 }
 
-int in_list(word, list)
+int in_list(char *word, char *list[])
 {
 
 }
 
-int treat_single_word(line)
+int treat_single_word(char line[])
 {
-    if(extract_order(line)!='rts') and (extract_order(line)!='stop')
+    if((extract_order(line)!='rts') && (extract_order(line)!= 'stop'))
     {
         print_error(line);
     }
@@ -31,7 +46,7 @@ int treat_single_word(line)
 }
 
 
-int treat_double_word(line)
+int treat_double_word(char line[])
 {
     if(in_list(extract_order(line), double_word_list)==0)
     {
@@ -43,7 +58,7 @@ int treat_double_word(line)
     }
 }
 
-treat_triple_word(line)
+treat_triple_word(char line[])
 {
     if(in_list(extract_order(line), triple_word_list)==0)
     {
@@ -107,7 +122,7 @@ int is_extern(char line[])
         get_label_value();
     return 0;
 }
-int treat_instruction(line)
+int treat_instruction(char line[])
 {
     if(valid_instruction_syntax(line)==1)
     {
@@ -130,7 +145,7 @@ int treat_instruction(line)
     }
 }
 
-int treat_order(line)
+int treat_order(char line[])
 {
     if(includes_order(line)==1)
     {
@@ -155,10 +170,6 @@ int treat_order(line)
         print_error(line);
         return 0;
     }
-}
-
-void ignore_line()
-{
 }
 
 int includes_instruction(char line[])

@@ -5,7 +5,7 @@
 int main ()
 {
   preprocessor("test.as");
-  first_scan();
-  second_scan();
+  first_scan("test.am");
+  second_scan("test.am");
   return 0;
 }
