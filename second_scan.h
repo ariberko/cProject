@@ -1,1 +1,1 @@
-second_scan();
+int second_scan();

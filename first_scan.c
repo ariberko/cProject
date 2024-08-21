@@ -1,7 +1,116 @@
+#include "preprocessor.h"
 #include "first_scan.h"
 
 char *double_word_list[9] = {"clr", "not", "inc", "dec", "jmp", "bne", "red", "prn", "jsr"};
 char *triple_word_list[5] = {"mov", "cmp", "add", "sub", "lea"};
+
+int is_data_line_valid(char line[])
+{
+
+}
+
+int insert_label_to_chart ()
+{
+
+}
+
+int extract_string (char line[])
+{
+
+}
+
+int allocate_memory_in_DC ()
+{
+
+}
+
+int starts_with_label (char linep[])
+{
+
+}
+
+int skip_label(char line[])
+{
+
+}
+
+int label_was_with_entry (char line[])
+{
+
+}
+
+int get_label_value (char line[])
+{
+
+}
+
+int valid_instruction_syntax(char line[])
+{
+
+}
+
+int treat_label (char line[])
+{
+
+}
+
+int move_DC ()
+{
+
+}
+
+int give_label_value()
+{
+
+}
+
+int extract_label (char line[])
+{
+
+}
+
+int includes_label (char line[])
+{
+
+}
+int is_string (char line[])
+{
+
+}
+
+int is_data (char line[])
+{
+
+}
+
+int treat_extern (char line[])
+{
+
+}
+
+int treat_entry (char line[])
+{
+
+}
+int extract_order (char line[])
+{
+
+}
+
+int convert_order_to_value(char line[])
+{
+
+}
+
+int create_word ()
+{
+
+}
+
+int save_word_to_memory (char line[])
+{
+
+}
 
 int double_word(char line[])
 {
@@ -119,7 +228,7 @@ int is_extern(char line[])
     if(label_was_with_entry(line)==1)
         print_error(line);
     else
-        get_label_value();
+        get_label_value(line);
     return 0;
 }
 int treat_instruction(char line[])

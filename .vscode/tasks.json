@@ -1,25 +1,26 @@
 {
     "version": "2.0.0",
     "tasks": [
-        {
-            "label": "compile",
-            "type": "shell",
-            "command": "gcc",
-            "args": [
-                "-g",
-                "${workspaceFolder}/main.c",
-                "${workspaceFolder}/first_scan.c",
-                "${workspaceFolder}/second_scan.c",
-                "${workspaceFolder}/preprocessor.c",
-                "-o",
-                "${workspaceFolder}/main"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": ["$gcc"],
-            "detail": "Compiling main.c and modules"
-        }
+      {
+        "label": "build",
+        "type": "shell",
+        "command": "gcc",
+        "args": [
+          "-g",
+          "main.c",
+          "preprocessor.c",
+          "first_scan.c",
+          "second_scan.c",
+          "-o",
+          "main"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Generated task to compile C files"
+      }
     ]
 }
+  

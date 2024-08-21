@@ -6,6 +6,10 @@
 char *macros[MAX_MACROS];
 int num_macros = 0;
 
+int print_warning(char line[])
+{
+    
+}
 int check_macro(char line[])
 {
     return (strncmp(line, "macr", 4) == 0);

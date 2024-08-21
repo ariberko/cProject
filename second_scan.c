@@ -41,7 +41,7 @@ int treat_sentence(char line[])
     }
 }
 
-int treat_order(char line[])
+int treat_order_second_scan(char line[])
 {
     if(single_word(line))
         {
@@ -69,7 +69,7 @@ int second_scan_process_line(char line[])
     }
     else
     {
-        treat_order(line);
+        treat_order_second_scan(line);
     }
     return 0;
 }
